@@ -1,6 +1,15 @@
 body {
-  background-color: #f9f7fe;
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
   font-family: sans-serif;
+}
+
+html {
+  background-color: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f3e7e9 100%
+  );
 }
 
 h1 {

@@ -25,7 +25,7 @@ function updateCity(event) {
   citiesElement.innerHTML = `  <div class="city">
           <div>
             <h2>${cityName}</h2>
-            <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+            <div class="date">${cityTime.format("dddd, MMMM Do, YYYY")}</div>
             <div class="time">${cityTime.format(
               "h:mm:ss"
             )} <small>${cityTime.format(`A`)}</small></div>
@@ -41,3 +41,9 @@ setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+
+let displayLocalTime = document.querySelector("#local-time");
+let currentLocation = moment.tz.guess();
+let currentTime = moment.tz(currentLocation);
+console.log(currentLocation);
+displayLocalTime.innerHTML = currentTime.format("h:mm:ss A");
